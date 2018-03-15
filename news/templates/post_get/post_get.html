@@ -1,0 +1,23 @@
+{% extends "base_template/base.html" %}
+
+{% block "container" %}
+    
+<form action="{% url 'post' %}" method="POST">
+    {% csrf_token %}
+    <input name="name" type="text" value="isaias">
+    <input type="submit" value="VAI POST!">
+</form>
+
+<br>
+
+<form action="{% url 'get' %}" method="GET">
+    {% csrf_token %}
+    <input name="id" type="number">
+    <input type="submit" value="VAI GET!">
+</form>
+
+<a href="/user_list_all">User list all</a><br>
+<a href="/admin">User login</a><br>
+
+{% endblock %}
+    

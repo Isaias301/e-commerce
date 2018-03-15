@@ -1,0 +1,15 @@
+{% extends "base_template/base.html" %}
+
+{% block "container" %}
+
+{% for user in users  %}
+        {% if user.name == "teste" %}
+        <h1>Não</h1>
+        {% else %}
+        <h1>{{ user.name }}</h1>
+        
+        {% endif %}
+        {% endfor %}
+        <a href="/admin">Login</a>
+        
+{% endblock %}
