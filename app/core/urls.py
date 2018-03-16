@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from core.views import index, product, products_list, contact
+from app.core.views import index, product, products_list, contact
 
 urlpatterns = [
     url(r'^$', index, name='index'),
